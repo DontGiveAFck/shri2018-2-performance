@@ -162,10 +162,6 @@
   display: inline-block;
   margin-right: 11px;
 }
-#root {
-  position: absolute;
-  left: -10000px;
-}
 .devices {
   display: flex;
   justify-content: flex-start;
@@ -328,7 +324,7 @@
   width: 108px;
   height: 27px;
   position: relative;
-  background-image: url("./assets/logo.png");
+  background-image: url("./assets/logo.webp");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
@@ -493,6 +489,9 @@
 }
 html {
   height: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 .page {
   height: 100%;
@@ -617,7 +616,7 @@ html {
   padding-right: 31px;
 }
 .weather__item_cloud-drizzle {
-  background: url("assets/cloud-drizzle.png") 100% 70%/26px no-repeat;
+  background: url("assets/cloud-drizzle.webp") 100% 70%/26px no-repeat;
 }
 .stats {
   opacity: 0;
@@ -653,12 +652,6 @@ hgroup,
 nav,
 section {
   display: block;
-}
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 
 img {
