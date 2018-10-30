@@ -48,11 +48,6 @@ const INDICATOR_OFFSET = 265;
 const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
 }
-
-
-/**
- * @param {Number} rotate Количество оборотов от нейтриального положения.
- */
 function setRotate(rotate) {
     if (rotate > maxRotate) {
         rotate = maxRotate;
