@@ -3,17 +3,14 @@ const rangeSLider = document.querySelector('.adjust-bar.adjust-bar_theme_temp');
 
 rangeSLider.oninput = function() {
     output.innerHTML = this.value > 0 ? '+' + this.value : this.value;
-}
-
+};
 const arrowLeftDevs = document.querySelector('.devices__paginator .paginator__arrow_left');
 const arrowRightDevs = document.querySelector('.devices__paginator .paginator__arrow_right');
 const panelCountDevs = document.querySelectorAll('.devices__panel').length;
 const devices = document.querySelector('.devices');
 const pagiantorDevs = document.querySelector('.devices__paginator');
 let currentPageDevs = 1;
-
 pagiantorDevs.classList.toggle('paginator_hide', panelCountDevs < 7);
-
 arrowRightDevs.addEventListener('click', function () {
     currentPageDevs += 1;
     arrowLeftDevs.classList.toggle('paginator__arrow_disabled', currentPageDevs === 1);
@@ -38,8 +35,8 @@ arrowLeftDevs.addEventListener('click', function () {
 
 let curValue;
 let curRotate;
-let maxRotate = 0.42; // 150 градусов
-let minRotate = -0.42; // -150 градусов
+let maxRotate = 0.42;
+let minRotate = -0.42;
 
 const MIN_VALUE = 26;
 const MAX_VALUE = 35;
@@ -47,12 +44,7 @@ const INDICATOR_OFFSET = 265;
 
 const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
-}
-
-
-/**
- * @param {Number} rotate Количество оборотов от нейтриального положения.
- */
+};
 function setRotate(rotate) {
     if (rotate > maxRotate) {
         rotate = maxRotate;
@@ -164,7 +156,7 @@ const TEMPS = {
     'cold': 0,
     'warm': 23,
     'hot': 30
-}
+};
 
 document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
     l.onclick = function() {
@@ -176,7 +168,7 @@ document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
 const showModal = function(selector) {
     document.querySelector(selector).classList.toggle('modal_open', true);
     document.querySelector('body').style.overflow = 'hidden';
-}
+};
 
 document.querySelectorAll('.panel_temp').forEach(p => {
     p.onclick = function() {
